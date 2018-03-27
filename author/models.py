@@ -1,11 +1,12 @@
 from live_updates import db
 
+
 class Author(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     fullname = db.Column(db.String(80))
     email = db.Column(db.String(35), unique=True)
     username = db.Column(db.String(80), unique=True)
-    passwork = db.Column(db.String(80))
+    password = db.Column(db.String(80))
     is_author = db.Column(db.Boolean)
     
     def __init__(self, fullname, email, username, password, is_author=False):
