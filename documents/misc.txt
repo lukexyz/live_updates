@@ -1,0 +1,43 @@
+Github config:
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+
+
+How to start venv:
+    $ cd live_updates
+    $ source venv/bin/activate
+
+
+How to get on mysql server:
+    $ mysql -u root -p       # pw is flask-SQL
+
+    mysql> show databases;
+    mysql> use blog;
+    mysql> show tables;
+
+
+Drop all entries to database:git sta
+    (venv) ec2-user:~/environment/live_updates (master) $ python3 manage.py shell
+>>> from live_updates import db
+>>> from author.models import *
+>>> db.session.commit()
+>>> db.drop_all()
+
+
+How to get cloud9 ec2 instance accessible from the web:
+- Click share in c9 top right and following instructions opening up ports etc
+
+
+    1. Amazon EC2 instance ID
+
+    $ curl http://169.254.169.254/latest/meta-data/instance-id
+    i-027bd3495b9b0b963
+
+    2. Get the Amazon EC2 instance's public IP address
+
+    curl http://169.254.169.254/latest/meta-data/public-ipv4
+    18.222.36.12
+    52.14.161.155
+
+    subnet-fe078596
+'''
