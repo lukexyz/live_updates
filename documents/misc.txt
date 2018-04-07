@@ -3,15 +3,17 @@ Github config:
     git config --global user.name "Your Name"
 
 
-How to start venv:
+How to create venv:
     $ cd live_updates
+    $ virtualenv -p python3 venv
+How to use venv:
     $ source venv/bin/activate
 
 
 How to get on mysql server:
     $ mysql -u root -p       # pw is flask-SQL
 
-    mysql> show databases;
+    mysql> show databases;virtual
     mysql> use blog;
     mysql> show tables;
 
